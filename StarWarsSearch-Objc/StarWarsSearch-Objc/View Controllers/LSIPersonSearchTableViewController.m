@@ -8,6 +8,8 @@
 
 #import "LSIPersonSearchTableViewController.h"
 #import "LSIPersonTableViewCell.h"
+#import "LSIPersonController.h"
+#import "LSIPerson.h"
 
 @interface LSIPersonSearchTableViewController ()
 
@@ -17,6 +19,16 @@
 
 @implementation LSIPersonSearchTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        
+        _personController = [[LSIPersonController alloc] init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.searchBar setDelegate:self];
@@ -24,7 +36,16 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 	
-	// TODO: Search for people and update UI async on main thread
+    [self.personController searchForPeopleWithSearchTerm:searchBar.text completion:^(NSArray *people, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
+                NSLog(@"Error: %@", error);
+                return;
+            }
+            
+            NSLog(@"People: %@", people);
+        });
+    }];
 }
 
 #pragma mark - Table view data source

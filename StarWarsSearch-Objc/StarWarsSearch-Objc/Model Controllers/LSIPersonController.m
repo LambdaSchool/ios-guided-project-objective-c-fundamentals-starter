@@ -7,6 +7,7 @@
 //
 
 #import "LSIPersonController.h"
+#import "LSIPerson.h"
 
 @implementation LSIPersonController
 
@@ -46,6 +47,22 @@ static NSString * const baseURLString = @"https://swapi.co/api/people";
         }
         
         
+        
+        // Create an array of people from the data
+        NSLog(@"JSON: %@", dictionary);
+        
+        // Decode the data
+        
+        NSArray *personDictionaries = dictionary[@"results"];
+        NSMutableArray *people = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *personDictionary in personDictionaries) {
+            // Convert NSDictionay to LSIPerson
+            LSIPerson *person = [[LSIPerson alloc] initWithDictionary:personDictionary];
+            [people addObject:person];
+        }
+        
+        completion(people, nil);
     }] resume];
     
     
