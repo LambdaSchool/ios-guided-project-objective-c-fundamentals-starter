@@ -8,15 +8,13 @@
 
 #import <XCTest/XCTest.h>
 
+
 @interface LSIStarWarsAPITests : XCTestCase
 
 @end
 
 @implementation LSIStarWarsAPITests
 
-- (void)testAPI {
 
-	// Create an API query and verify results
-}
 
 @end

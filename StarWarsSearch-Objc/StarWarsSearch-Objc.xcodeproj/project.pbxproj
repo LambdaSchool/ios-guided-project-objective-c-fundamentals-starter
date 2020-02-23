@@ -19,6 +19,10 @@
 		BD9AA50E2371D7D400E8D4EF /* LSIPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA50D2371D7D400E8D4EF /* LSIPersonTests.m */; };
 		BD9AA5122371D8E200E8D4EF /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = BD9AA5112371D8E200E8D4EF /* Person.json */; };
 		BD9AA5142371D90F00E8D4EF /* StarWarsResults.json in Resources */ = {isa = PBXBuildFile; fileRef = BD9AA5132371D90F00E8D4EF /* StarWarsResults.json */; };
+		C070B3AA23D76F49003606E0 /* LSIPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C070B3A923D76F49003606E0 /* LSIPerson.m */; };
+		C070B3AB23D76F49003606E0 /* LSIPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C070B3A923D76F49003606E0 /* LSIPerson.m */; };
+		C09747C023D77C3900DD739F /* LSIPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09747BF23D77C3900DD739F /* LSIPersonController.m */; };
+		C09747C123D77C3900DD739F /* LSIPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09747BF23D77C3900DD739F /* LSIPersonController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		BD9AA5102371D8B000E8D4EF /* LSIFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		BD9AA5112371D8E200E8D4EF /* Person.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Person.json; sourceTree = "<group>"; };
 		BD9AA5132371D90F00E8D4EF /* StarWarsResults.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StarWarsResults.json; sourceTree = "<group>"; };
+		C070B3A823D76F49003606E0 /* LSIPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIPerson.h; sourceTree = "<group>"; };
+		C070B3A923D76F49003606E0 /* LSIPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIPerson.m; sourceTree = "<group>"; };
+		C09747BE23D77C3900DD739F /* LSIPersonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIPersonController.h; sourceTree = "<group>"; };
+		C09747BF23D77C3900DD739F /* LSIPersonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIPersonController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +108,11 @@
 				BD9AA4E02371D53400E8D4EF /* SceneDelegate.h */,
 				BD9AA4E12371D53400E8D4EF /* SceneDelegate.m */,
 				BD9AA5042371D55900E8D4EF /* Main.storyboard */,
-				BD9AA5062371D58300E8D4EF /* LSIPersonSearchTableViewController.h */,
-				BD9AA5072371D58300E8D4EF /* LSIPersonSearchTableViewController.m */,
-				BD9AA5092371D64500E8D4EF /* LSIPersonTableViewCell.h */,
-				BD9AA50A2371D64500E8D4EF /* LSIPersonTableViewCell.m */,
-				BD9AA50F2371D87700E8D4EF /* LSILog.h */,
+				C09747BB23D77BE800DD739F /* View Controllers */,
+				C09747C223D77C4400DD739F /* Model Controllers */,
+				C09747BC23D77BF300DD739F /* Models */,
+				C09747BA23D77BDC00DD739F /* Views */,
+				C09747BD23D77BFD00DD739F /* Helpers */,
 				BD9AA50C2371D74900E8D4EF /* Person Search TableView */,
 				BD9AA4E92371D53500E8D4EF /* Assets.xcassets */,
 				BD9AA4EB2371D53500E8D4EF /* LaunchScreen.storyboard */,
@@ -132,6 +140,50 @@
 			children = (
 			);
 			path = "Person Search TableView";
+			sourceTree = "<group>";
+		};
+		C09747BA23D77BDC00DD739F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA5092371D64500E8D4EF /* LSIPersonTableViewCell.h */,
+				BD9AA50A2371D64500E8D4EF /* LSIPersonTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C09747BB23D77BE800DD739F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA5062371D58300E8D4EF /* LSIPersonSearchTableViewController.h */,
+				BD9AA5072371D58300E8D4EF /* LSIPersonSearchTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C09747BC23D77BF300DD739F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C070B3A823D76F49003606E0 /* LSIPerson.h */,
+				C070B3A923D76F49003606E0 /* LSIPerson.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C09747BD23D77BFD00DD739F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA50F2371D87700E8D4EF /* LSILog.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C09747C223D77C4400DD739F /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C09747BE23D77C3900DD739F /* LSIPersonController.h */,
+				C09747BF23D77C3900DD739F /* LSIPersonController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9AA4DF2371D53400E8D4EF /* AppDelegate.m in Sources */,
+				C070B3AA23D76F49003606E0 /* LSIPerson.m in Sources */,
+				C09747C023D77C3900DD739F /* LSIPersonController.m in Sources */,
 				BD9AA5082371D58300E8D4EF /* LSIPersonSearchTableViewController.m in Sources */,
 				BD9AA50B2371D64500E8D4EF /* LSIPersonTableViewCell.m in Sources */,
 				BD9AA4F02371D53500E8D4EF /* main.m in Sources */,
@@ -249,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9AA4FA2371D53600E8D4EF /* LSIStarWarsAPITests.m in Sources */,
+				C070B3AB23D76F49003606E0 /* LSIPerson.m in Sources */,
 				BD9AA50E2371D7D400E8D4EF /* LSIPersonTests.m in Sources */,
+				C09747C123D77C3900DD739F /* LSIPersonController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 452VS5LHDK;
 				INFOPLIST_FILE = "StarWarsSearch-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,7 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 452VS5LHDK;
 				INFOPLIST_FILE = "StarWarsSearch-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
